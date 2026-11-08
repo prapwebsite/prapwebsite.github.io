@@ -243,7 +243,11 @@ footer,
 
 
 <div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained"><div class="entry-content alignwide wp-block-post-content is-layout-flow wp-block-post-content-is-layout-flow">
-<h4 class="wp-block-heading alignwide has-text-align-center">Pioneering AI-Driven Robotics for Human Augmentation, Healthcare, and Manufacturing</h4>
+<h4 class="wp-block-heading alignwide has-text-align-center">Advancing Robot Intelligence Through Learning for Human&ndash;Robot Interaction, Healthcare, and Manufacturing</h4>
+
+
+
+<p>Our research asks how robots can learn what they do not already know and use that knowledge to decide and act reliably under uncertainty, partial observability, and changing conditions. Robot learning is at the core of this work, and human&ndash;robot interaction, rehabilitation, and smart sensing are the settings where we develop and test these ideas.</p>
 
 
 
@@ -252,34 +256,40 @@ footer,
 
 
 
-<h4 class="wp-block-heading has-text-align-center"><strong>Human Robot Interaction</strong></h4>
+<h4 class="wp-block-heading has-text-align-center"><strong>Robot Learning</strong></h4>
 
 
 
 <hr class="wp-block-separator has-alpha-channel-opacity">
 </div>
 
-	
 
-	
+
+<p class="has-text-align-center" style="text-align:center !important">Learning-based planning, control, and decision-making for robots that must act with limited data, incomplete maps, hidden objects, and changing tasks.</p>
+
+
+
+<div style="height:7px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
 
 <div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
-<figure class="wp-block-image size-full"><a href="https://www.youtube.com/watch?v=rnJD-8c8aBU" target="_blank" rel=" noreferrer noopener"><img fetchpriority="high" decoding="async" width="800" height="450" src="https://soroushkorivand.com/wp-content/uploads/2025/08/HRI_Hand.gif" alt="" class="wp-image-738"></a></figure>
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="787" src="https://soroushkorivand.com/wp-content/uploads/2026/11/flowmatching-navigation.png" alt="Nominal versus cost-guided flow-matching trajectories"></figure>
 </div>
 
 
 
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
-<h5 class="wp-block-heading">Augmenting Human Dexterity through Contactless Human-Robot Interaction</h5>
+<h5 class="wp-block-heading">Model-Based Cost-Guided Flow-Matching Inference for Robotic Navigation</h5>
 
 
 
-<p>Collaborative robots are increasingly used in high-risk environments where humans provide high-level decision-making and robots carry out physical tasks requiring strength and precision. Achieving smooth, reliable, and dexterous interaction, however, remains a challenge. We developed a vision-based framework for contactless control of a Universal Robots arm that progressed from gesture recognition, to 2D hand tracking, and ultimately to 3D motion feedback with dual cameras. By integrating spherical linear interpolation (slerp), the system achieved more natural and consistent orientation control compared to traditional methods. This work demonstrates how intuitive, vision-driven interfaces can expand human dexterity in collaborative robotics and paves the way for future multimodal systems combining IMU, EMG, and AI-assisted input.</p>
+<p>Robot policies trained from limited or imperfect demonstrations often reproduce feasible behavior without reliably producing efficient, goal-directed, and collision-aware motion. We developed a model-based, cost-guided inference method that improves a pretrained flow-matching policy without retraining it. During selected integration steps, the method estimates the final action chunk, predicts the resulting trajectory through a differentiable learned dynamics model, and scores it for goal progress, smoothness, obstacle clearance, control effort, and feasibility. The gradient of this score corrects the evolving action chunk while keeping the learned behavior, and the approach runs in a receding-horizon control loop. In successful navigation episodes, cost guidance brought the robot closer to the goal along shorter, more direct paths, showing how learned policies can adapt to new task conditions at test time.</p>
 
 
 
-<p>|Publication| |<a href="https://youtu.be/rnJD-8c8aBU" target="_blank" rel="noreferrer noopener">Video</a>|</p>
+<p>|Publication|</p>
 </div>
 </div>
 
@@ -291,23 +301,21 @@ footer,
 
 <div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
-<figure class="wp-block-image aligncenter size-full is-resized"><a href="https://youtu.be/rlMUFu1V42M" target="_blank" rel=" noreferrer noopener"><img decoding="async" width="800" height="450" src="https://soroushkorivand.com/wp-content/uploads/2025/09/LVLM2-ezgif.com-optimize.gif" alt="" class="wp-image-804" style="width:379px;height:auto"></a></figure>
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="900" height="671" src="https://soroushkorivand.com/wp-content/uploads/2026/11/lfd-fruit-approach.jpg" alt="Robot camera view approaching a partially occluded apple"></figure>
 </div>
 
 
 
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
-<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-6c531013 wp-block-group-is-layout-flex">
-<h5 class="wp-block-heading">Vision-Driven Language Reasoning for Adaptive Robotic Arms in Unstructured Human&ndash;Robot Collaboration</h5>
-</div>
+<h5 class="wp-block-heading">Learning from Demonstration for Robotic Fruit Approach Under Partial Occlusion</h5>
 
 
 
-<p>Industrial robots excel at repetitive tasks in structured environments but struggle when faced with dynamic, unpredictable settings. We developed a Universal Robots UR10e platform with an Intel RealSense depth camera and GPT-4 integration, enabling the robot to perceive its surroundings, interpret natural language instructions, and reason about tasks. The system successfully performs several tasks without relying on predefined object positions. By merging vision, reasoning, and language, this work lowers barriers to deploying robots in unstructured environments and opens pathways to assistive applications in daily life.</p>
+<p>In orchards, leaves and branches often hide part of the fruit a robot needs to reach, which makes the target position uncertain and the approach path risky. This work uses learning from demonstration to teach a robot arm how to approach partially occluded fruit. Using live camera feedback, the robot tracks the fruit, estimates its distance to the target and to nearby leaves, and uses leaf density to choose a safer side to approach from, then moves toward the fruit in a closed loop. Agriculture provides a natural testbed for a broader robot-learning problem: acting reliably when the goal is only partly visible.</p>
 
 
 
-<p>|Publication| |<a href="https://youtu.be/rlMUFu1V42M">Video</a>|</p>
+<p>|Publication|</p>
 </div>
 </div>
 
@@ -363,7 +371,187 @@ footer,
 
 
 
-<p>|Publication| |<a href="https://soroushkorivand.com/research/youtube.com/watch?v=1gCA8q6ftdA&amp;feature%3Dyoutu.be">Video</a>|</p>
+<p>|Publication| |<a href="https://youtu.be/1gCA8q6ftdA">Video</a>|</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="870" src="https://soroushkorivand.com/wp-content/uploads/2026/11/vlm-navigation-platform.jpg" alt="Simulated Ridgeback mobile base with a Franka Research 3 arm and ZED cameras"></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h5 class="wp-block-heading">When Maps Are Incomplete: Evaluating Vision-Language-Guided Navigation Against Nav2</h5>
+
+
+
+<p>Mobile robots often operate with prior maps that are incomplete or out of date. We developed and evaluated two vision-language-model (VLM) navigation architectures for these conditions: a double-VLM planner for global route reasoning and local subgoal selection, and a single global VLM planner that generates rolling waypoint plans. Both keep Nav2 for localization, costmap updates, and low-level execution on a simulated Clearpath Ridgeback with a Franka Research 3 arm and dual ZED cameras. Across three Isaac Sim environments (an office with hidden furniture, a maze with a missing wall, and a warehouse with blocked aisles), Nav2 performed best when hidden obstacles were detected early but struggled after committing to blocked routes, while the single global VLM planner reached 100% success in the maze. The results show that VLMs are most useful for high-level route reinterpretation, while geometric planners remain essential for local execution.</p>
+
+
+
+<p>|<a href="https://ieeexplore.ieee.org/abstract/document/11760972" target="_blank" rel="noreferrer noopener">Publication</a>|</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="805" src="https://soroushkorivand.com/wp-content/uploads/2026/11/llm-vlm-manipulation.jpg" alt="Simulated Franka Research 3 tabletop manipulation scene"></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h5 class="wp-block-heading">Embodied Zero-Shot Task Planning via Hardware-Aware LLM&ndash;VLM Integration for Grounded Robotic Manipulation</h5>
+
+
+
+<p>Large language models can turn natural-language instructions into plausible manipulation plans, but real robots need decisions that respect their embodiment, reach, collision constraints, and grasp feasibility. We developed a hardware-aware LLM&ndash;VLM framework for a simulated Franka Research 3 in NVIDIA Isaac Sim that separates symbolic reasoning from metric execution. The LLM planner produces only symbolic task information, a local vision-language model verifies ambiguous objects, and deterministic modules that use the robot model, scene geometry, MoveIt 2 collision checking, inverse kinematics, and grasp validation make every physical decision. Across 40 trials covering pickup, occluded access, keep-out reasoning, placement, and multi-step tasks, the framework succeeded in 92.5% of trials, compared with 10% for the baseline with VLM assistance disabled.</p>
+
+
+
+<p>|<a href="https://ieeexplore.ieee.org/abstract/document/11760910" target="_blank" rel="noreferrer noopener">Publication</a>|</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="1000" height="345" src="https://soroushkorivand.com/wp-content/uploads/2026/11/robotic-bust-fabrication.jpg" alt="Robotic scanning and CNC machining cell with two UR10e arms"></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h5 class="wp-block-heading">Autonomous Perception-to-Manufacturing Pipeline for Robotic 3D Bust Fabrication</h5>
+
+
+
+<p>Turning real-world geometry into a manufactured part usually requires many manual steps, from data capture to cleanup and machine programming. We developed an autonomous perception-to-manufacturing pipeline that fabricates customized human busts from live subjects. A 6-DOF robot arm captures multi-view images for photogrammetric reconstruction, a rule-based mesh pipeline removes artifacts, estimates orientation and anatomical landmarks, and scales the model to the stock, and template-based CAM drives coordinated multi-robot CNC machining. Machined parts deviated from their reconstructed models by 0.042 mm on average. The study also shows how uncertainty from image capture propagates through reconstruction and machining, a key challenge for robots that act on what they perceive.</p>
+
+
+
+<p>|Publication|</p>
+</div>
+</div>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-group is-content-justification-center is-nowrap is-layout-flex wp-container-core-group-is-layout-23441af8 wp-block-group-is-layout-flex">
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h4 class="wp-block-heading has-text-align-center"><strong>Human Robot Interaction</strong></h4>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+</div>
+
+
+
+<p class="has-text-align-center" style="text-align:center !important">Robots that understand human commands, intent, and state, and adapt their behavior to work safely and effectively with people.</p>
+
+
+
+<div style="height:7px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full is-resized"><a href="https://youtu.be/rlMUFu1V42M" target="_blank" rel=" noreferrer noopener"><img decoding="async" width="800" height="450" src="https://soroushkorivand.com/wp-content/uploads/2025/09/LVLM2-ezgif.com-optimize.gif" alt="" class="wp-image-804" style="width:379px;height:auto"></a></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-6c531013 wp-block-group-is-layout-flex">
+<h5 class="wp-block-heading">A Modular Vision-Language Framework for Safe Human&ndash;Robot Collaboration</h5>
+</div>
+
+
+
+<p>Large language models can interpret natural commands and reason about objects, sequencing, and task goals, but using them directly for robot control can produce unsafe, ambiguous, or infeasible actions. We developed a voice-guided vision&ndash;language framework on a UR10e arm that combines speech transcription, RGB-D perception, GPT-4 reasoning, and a safety-constrained symbolic execution layer. Instead of sending unrestricted low-level commands, the system translates language into validated robot primitives. Across 98 prompts and 392 real-world trials spanning seven reasoning categories, the framework achieved a 96.48% overall success rate, showing that structured LLM-based control can make language-guided manipulation safe, reliable, and practical for non-expert users.</p>
+
+
+
+<p>|Publication| |<a href="https://youtu.be/rlMUFu1V42M">Video</a>|</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image size-full"><a href="https://www.youtube.com/watch?v=rnJD-8c8aBU" target="_blank" rel=" noreferrer noopener"><img fetchpriority="high" decoding="async" width="800" height="450" src="https://soroushkorivand.com/wp-content/uploads/2025/08/HRI_Hand.gif" alt="" class="wp-image-738"></a></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h5 class="wp-block-heading">A Modular Framework for Comparative Evaluation of Teleoperation Modalities</h5>
+
+
+
+<p>How a person commands a robot, whether by hand motion, keyboard, or voice, shapes accuracy, speed, and ease of use, yet these inputs are rarely compared under identical conditions. We built a unified framework that integrates vision-based hand tracking, keyboard control, and natural-language voice commands through GPT-4o within one control architecture on a 7-degree-of-freedom manipulator. Using pick-and-place and insertion tasks, we compared trajectory accuracy, latency, and task success across repeated trials. Keyboard input was the most reliable with the lowest latency, hand tracking offered continuous control directly from hand motion with moderate delay, and LLM-based control allowed flexible high-level commands but with higher latency and variability. The framework supports reproducible benchmarking and helps guide the choice of interface for teleoperation.</p>
+
+
+
+<p>|Publication| |<a href="https://youtu.be/rnJD-8c8aBU" target="_blank" rel="noreferrer noopener">Video</a>|</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="515" height="688" src="https://soroushkorivand.com/wp-content/uploads/2026/11/intent-based-cobot.jpg" alt="UR7e collaborative robot with wrist camera, microphone, and teach pendant"></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h5 class="wp-block-heading">Multi-Modal AI for Intent-Based Human-Cobot Collaboration</h5>
+
+
+
+<p>Manufacturing increasingly needs robots that can be directed by intent rather than coordinates. We developed a multi-modal framework for intent-based control of a Universal Robots UR7e collaborative arm that combines a Robotiq wrist camera, an adaptive two-finger gripper, and a natural-language interpretation layer, so an operator can say &ldquo;place the red indicator&rdquo; without giving any positions. Following a sense&ndash;think&ndash;act design, the camera detects industrial indicator lights, a spaCy language model maps spoken keywords to robot registers, and URScript routines assemble the parts into a four-slot enclosure. Experiments showed consistent detection, reliable grasping, and repeatable placement, showing how grounding language in the task can reduce the effort needed to work with a robot.</p>
+
+
+
+<p>|Publication|</p>
 </div>
 </div>
 
@@ -554,7 +742,7 @@ footer,
 
 
 
-<h4 class="wp-block-heading has-text-align-center"><strong><strong>AI in Rehabilitation</strong></strong></h4>
+<h4 class="wp-block-heading has-text-align-center"><strong>AI in Rehabilitation</strong></h4>
 
 
 
@@ -563,7 +751,41 @@ footer,
 
 
 
-<div style="height:13px" aria-hidden="true" class="wp-block-spacer"></div>
+<p class="has-text-align-center" style="text-align:center !important">Learning-based sensing and modeling that measure, understand, and support human movement for rehabilitation and assistive devices.</p>
+
+
+
+<div style="height:7px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="1180" height="591" src="https://soroushkorivand.com/wp-content/uploads/2026/11/telerehab-hand-assessment.jpg" alt="Overview of the camera-based telerehabilitation framework for hand function"></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h5 class="wp-block-heading">Single-Camera Assessment of Hand Motion, Force, and Model-Estimated Joint Torque for Telerehabilitation</h5>
+
+
+
+<p>Recovery from hand injury depends on weeks of home exercise that therapists cannot observe, and rural patients often travel far to reach a certified hand therapist. We developed a single-camera telerehabilitation framework that reports finger-specific range of motion, applied force, and model-estimated joint torque, using camera-derived joint angles to drive a MANO-based virtual hand in PyBullet. In a two-phase study with 20 healthy adults, 17 patients receiving upper-extremity rehabilitation, and 3 clinicians, displacement error was about 6.5 to 6.8 mm and normalized force accuracy ranged from 83% to 89%, with patient errors comparable to those of healthy adults. Patients and healthy participants rated the system&rsquo;s usability favorably. This work was conducted with clinicians at the University of Mississippi Medical Center.</p>
+
+
+
+<p>Supported by the Health Resources and Services Administration (HRSA), Award #U66RH31459.</p>
+
+
+
+<p>|Publication|</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
 
@@ -586,6 +808,32 @@ footer,
 
 
 <p>|<a href="https://ieeexplore.ieee.org/document/11062975">Publication</a>| |<a href="https://youtu.be/nEn5S-2kBiU">Video</a>|</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="1000" height="666" src="https://soroushkorivand.com/wp-content/uploads/2026/11/emg-finger-force.png" alt="Pipeline from 8-channel forearm EMG to finger, motion, and force predictions"></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h5 class="wp-block-heading">Finger Identification, Flexion&ndash;Extension Classification, and Force Estimation from Surface EMG</h5>
+
+
+
+<p>Prosthetic hands must recognize what their users intend to do. Using a single 8-channel surface EMG ring, we trained models that decode which finger the user intends to move, whether the motion is flexion or extension, and how much force they intend to apply during two-finger grasping. With data from 33 participants, we compared XGBoost, Random Forest, and the transformer-based TabPFN foundation model. Within-participant models reached a force R&sup2; of 0.93, 97% flexion&ndash;extension accuracy, and 89% finger accuracy. Models transferred poorly to new users, but a short calibration recording from each new user recovered much of the gap, pointing toward practical, quickly personalized prosthetic control.</p>
+
+
+
+<p>|Publication|</p>
 </div>
 </div>
 
@@ -675,7 +923,7 @@ footer,
 
 
 
-<div style="height:43px" aria-hidden="true" class="wp-block-spacer"></div>
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
 
@@ -707,7 +955,7 @@ footer,
 
 
 
-<div style="height:43px" aria-hidden="true" class="wp-block-spacer"></div>
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
 
@@ -735,7 +983,7 @@ footer,
 
 
 
-<div style="height:43px" aria-hidden="true" class="wp-block-spacer"></div>
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
 
@@ -776,7 +1024,7 @@ footer,
 
 
 
-<h4 class="wp-block-heading has-text-align-center"><strong><strong><strong>Vibration and Control</strong></strong></strong></h4>
+<h4 class="wp-block-heading has-text-align-center"><strong>Vibration and Control</strong></h4>
 
 
 
@@ -785,7 +1033,63 @@ footer,
 
 
 
+<p class="has-text-align-center" style="text-align:center !important">Sensing, signal analysis, and machine learning for smart structures, vibration control, and advanced manufacturing.</p>
+
+
+
 <div style="height:7px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="1000" height="714" src="https://soroushkorivand.com/wp-content/uploads/2026/11/pzt-strength-framework.jpg" alt="Active PZT sensing and machine-learning framework for concrete strength estimation"></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h5 class="wp-block-heading">Machine-Learning-Assisted Piezoelectric Sensing for Non-Destructive Early-Age Concrete Strength Assessment</h5>
+
+
+
+<p>Knowing concrete strength early is essential for timely construction decisions, but compression testing is destructive and gives no continuous view of strength development. We developed a machine-learning-assisted PZT actuator&ndash;sensor framework that estimates early-age strength from repeatable wave-propagation measurements. We studied two surface-mounted actuator configurations and distributed sensor layouts, sending burst-sine excitations from 500 Hz to 120 kHz through concrete specimens and extracting time, frequency, and time&ndash;frequency features from quality-screened responses. The most detectable frequencies were not always the most informative: a retained high-frequency subset gave the best results, with the side-actuator layout reaching R&sup2; = 0.774 for strength regression and 88.6% accuracy for strength-state classification.</p>
+
+
+
+<p>|Publication|</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="1024" height="1536" src="https://soroushkorivand.com/wp-content/uploads/2026/11/pzt-explainable-features.jpg" alt="Study design comparing impact excitation and controlled PZT actuation"></figure>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:66.66%">
+<h5 class="wp-block-heading">Physically Guided Interpretation of Piezoelectric Signal Features for Concrete Curing Assessment Under Impact and Controlled Excitation</h5>
+
+
+
+<p>Data-driven concrete monitoring with PZT sensors often focuses on prediction accuracy while leaving the physical meaning of model inputs unclear. This study examines how curing-sensitive PZT signal features depend on the excitation mechanism and actuator&ndash;sensor geometry. We compared manual rebound-hammer impact recorded by PZT sensors with controlled burst-sine excitation from a surface-bonded PZT actuator at 3, 7, 14, and 21 days of curing. Several features tracked strength development strongly, such as the number of detected peaks under impact (Spearman &rho; = 0.95) and two-bin Fourier entropy under controlled actuation (median &rho; = 0.95). These results provide a physically grounded basis for explainable, AI-based assessment of concrete curing.</p>
+
+
+
+<p>|<a href="https://doi.org/10.3390/act15100517" target="_blank" rel="noreferrer noopener">Publication</a>|</p>
+</div>
+</div>
+
+
+
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
 
@@ -813,7 +1117,7 @@ footer,
 
 
 
-<div style="height:43px" aria-hidden="true" class="wp-block-spacer"></div>
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
 
@@ -841,7 +1145,7 @@ footer,
 
 
 
-<div style="height:43px" aria-hidden="true" class="wp-block-spacer"></div>
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
 
@@ -866,6 +1170,10 @@ footer,
 <p>|<a href="https://link.springer.com/article/10.1007/s00170-018-03274-w">Publication</a>|</p>
 </div>
 </div>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
 
